@@ -2,9 +2,8 @@ from PIL import Image, ImageDraw, ImageFont
 from random import randint
 
 
-lo = 300
+no = 300
 fontsize = 40
-
 
 def random_with_N_digits(n):
     range_start = 10**(n-1)
@@ -12,7 +11,7 @@ def random_with_N_digits(n):
     return randint(range_start, range_end)
 
 
-for m in range(lo):
+for m in range(no):
     font = ImageFont.truetype("arial.ttf", fontsize)
     img = Image.new('RGB', (320, 320), color=(0+m, 0+m*1, 0+m*2))
     d = ImageDraw.Draw(img)
